@@ -110,16 +110,15 @@ These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
 
 ### Using the Playbook
-In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
+
+*In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+---Filebeat---
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+Copy the filebeat-configuration.yml file to /etc/ansible/roles/files.
+Update the filebeat-configuration.yml file to include the ELK private IP in lines 1106 and 1806.
+Run the playbook, and navigate to http://40.75.3.5:5601/app/kibana#/home/ (ELK-VM public IP) to check that the installation worked as expected.
+
+http://40.75.3.5:5601/app/kibana#/dashboard/Filebeat-syslog-dashboard-ecs?_g=(refreshInterval:(pause:!f,value:900000),time:(from:now-7d,to:now))&_a=(description:'Syslog%20dashboard%20from%20the%20Filebeat%20System%20module',filters:!(),fullScreenMode:!f,options:(darkTheme:!f),panels:!((embeddableConfig:(),gridData:(h:16,i:'1',w:32,x:0,y:4),id:Syslog-events-by-hostname-ecs,panelIndex:'1',type:visualization,version:'7.6.1'),(embeddableConfig:(),gridData:(h:16,i:'2',w:16,x:32,y:4),id:Syslog-hostnames-and-processes-ecs,panelIndex:'2',type:visualization,version:'7.6.1'),(embeddableConfig:(columns:!(host.hostname,process.name,message),sort:!('@timestamp',desc)),gridData:(h:28,i:'3',w:48,x:0,y:20),id:Syslog-system-logs-ecs,panelIndex:'3',type:search,version:'7.6.1'),(embeddableConfig:(),gridData:(h:4,i:'4',w:48,x:0,y:0),id:'327417e0-8462-11e7-bab8-bd2f0fb42c54-ecs',panelIndex:'4',type:visualization,version:'7.6.1')),query:(language:kuery,query:''),timeRestore:!f,title:'%5BFilebeat%20System%5D%20Syslog%20dashboard%20ECS',viewMode:view)
