@@ -5,6 +5,9 @@ The files in this repository were used to configure the network depicted below.
 Network Diagram:
 
 https://drive.google.com/file/d/1CNpJVin53k6dWn3yT1I-avJiSzCOMgTO/view?usp=sharing
+
+https://drive.google.com/file/d/1UUAwGPMy0HHMnZ0xFPjMI_hkPBSixydT/view?usp=sharing
+
 ![image](https://user-images.githubusercontent.com/69355213/119244217-3d8cc680-bb3c-11eb-8699-082ca5b2de38.png)
 
 
